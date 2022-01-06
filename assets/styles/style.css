@@ -1,0 +1,358 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600;700&display=swap");
+@font-face {
+  src: local("Yu Gothic Medium");
+  font-family: YuGothicM;
+}
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+base - 基本設定
+========================================================= */
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  font-weight: 400;
+  font-family: "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+a:hover {
+  opacity: 0.7;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.l-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.p-blog {
+  background-color: #eee;
+}
+.p-blog__inner {
+  padding-top: 50px;
+}
+.p-blog__tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -1px;
+  padding: 1px;
+  background-color: #ffff;
+}
+.p-blog__tablink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 25%;
+  height: 50px;
+  margin-left: 1px;
+  background-color: #666;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.8rem;
+  font-family: "Arial";
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.p-blog__tablink--active {
+  background-color: #f15a24;
+}
+.p-blog__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 45px;
+  margin-left: -20px;
+}
+.p-blog__content a {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  margin-left: 20px;
+  background-color: #fff;
+}
+.p-blog__img {
+  position: relative;
+}
+.p-blog__img {
+  height: 240px;
+}
+.p-blog__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.p-blog__cate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 120px;
+  height: 25px;
+  background-color: #f15a24;
+  color: #ffff;
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-family: "Arial";
+  text-transform: uppercase;
+}
+.p-blog__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 180px;
+  padding-top: 25px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+}
+.p-blog__name {
+  color: #4d4d4d;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: "Meiryo";
+}
+.p-blog__date {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+  color: #808080;
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-family: "Meiryo";
+}
+
+.p-tc {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .sp-only {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  img {
+    max-width: 100%;
+  }
+  .pc-only {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .p-blog__inner {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .p-blog__tab {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .p-blog__tablink {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .p-blog__content a {
+    width: calc(50% - 20px);
+  }
+  .p-blog__info {
+    height: 150px;
+  }
+  .p-blog__name {
+    font-size: 1.4rem;
+  }
+  .p-blog__date {
+    font-size: 1.4rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
